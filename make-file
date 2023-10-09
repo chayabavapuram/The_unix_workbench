@@ -1,0 +1,10 @@
+README.md: guessinggame.sh
+    echo "# Guessing Game Project" > README.md
+    date +"Date and Time at Make Run: %Y-%m-%d %H:%M:%S" >> README.md
+    echo "" >> README.md
+    echo "Number of Lines in guessinggame.sh: $$(wc -l < guessinggame.sh)" >> README.md
+
+github-pages: README.md
+    git add README.md
+    git commit -m "Updated README.md"
+    git push origin master
